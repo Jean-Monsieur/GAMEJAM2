@@ -8,6 +8,9 @@ public class ButtonHandler : MonoBehaviour
     [SerializeField]
     private GameObject  Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, travailler;
 
+    
+
+
     public void Click_StatsMenu()
     {
 
@@ -53,7 +56,9 @@ public class ButtonHandler : MonoBehaviour
     public void Click_Course()
     {
         calendrier.SetActive(false);
-        Gym.SetActive(true);
+        courir.SetActive(true);
+        StartCoroutine(TexteGrossis(courir));
+        this.gameObject.GetComponent<GameMaster>().setCardio(5);
 
     }
 
@@ -79,7 +84,7 @@ public class ButtonHandler : MonoBehaviour
 
         Endroit.SetActive(false);
         calendrier.SetActive(true);
-
+        this.gameObject.GetComponent<GameMaster>().setJour(1);
 
     }
 }

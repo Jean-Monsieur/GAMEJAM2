@@ -6,15 +6,29 @@ using UnityEngine.UI;
 public class GameMaster : MonoBehaviour
 {
     [SerializeField]
-    public Text week, intel, cardio, strenght, dance;
+    public Text jour, intel, cardio, strenght, dance;
 
-    private int Week, Intel, Cardio, Strenght, Dance;
+    private int Jour, Intel, Cardio, Strenght, Dance;
+
+    //private string[] Jours = new Jours[] ;
+
+    string[] Jours = new string[7];
 
     void Start()
     {
-        Week = 2;
-        week.text = Week.ToString();
-        
+        Jours[0] = "Lundi";
+        Jours[1] = "Mardi";
+        Jours[2] = "Mercredi";
+        Jours[3] = "Jeudi";
+        Jours[4] = "Vendredi";
+        Jours[5] = "Samedi";
+        Jours[6] = "Dimanche";
+
+        jour.text = "Lundi";
+
+        //Week = 2;
+        //week.text = Week.ToString();
+
     }
 
     
@@ -48,6 +62,14 @@ public class GameMaster : MonoBehaviour
     {
         Cardio = Cardio + _cardio;
         cardio.text = Cardio.ToString();
+
+    }
+
+
+    public void setJour(int _jour)
+    {
+        Jour += _jour;
+        jour.text = Jours[Jour];
 
     }
 }
