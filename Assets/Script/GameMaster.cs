@@ -25,8 +25,29 @@ public class GameMaster : MonoBehaviour
 
     public void setStrenght(int _strenght)
     {
-        Strenght = _strenght;
+        Strenght = Strenght + _strenght;
         strenght.text = Strenght.ToString();
+
+    }
+
+    public void setIntel(int _intel)
+    {
+        Intel = Intel + _intel;
+        intel.text = Intel.ToString();
+
+    }
+
+    public void setDance(int _dance)
+    {
+        Dance = Dance + _dance;
+        dance.text = Dance.ToString();
+
+    }
+
+    public void setCardio(int _cardio)
+    {
+        Cardio = Cardio + _cardio;
+        cardio.text = Cardio.ToString();
 
     }
 }
