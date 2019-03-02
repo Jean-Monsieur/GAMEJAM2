@@ -38,6 +38,7 @@ public class BenchPressed : MonoBehaviour
     bool start ;
     bool timerFinished;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,19 +49,18 @@ public class BenchPressed : MonoBehaviour
         hitPosition = 1;
         hit = 0;
         releaseRatio = 0;
-       
+
         timerFinished = false;
         start = false;
         difficulty = 75;
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-
         if (Input.GetButtonDown("Hit") && Gamefinished == false)
+
         {
 
             
@@ -96,13 +96,14 @@ public class BenchPressed : MonoBehaviour
             player.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Benchpress/BenchAnimation_" + hitPosition.ToString());
             releaseRatio = 0;
         }
-
+            
 
         if (hitPosition == maxLevel)
         {
             // GameMaster.GetComponent<GameMaster>().setStrenght(5);
             WinScreen.SetActive(true);
             Gamefinished = true;
+
 
 
         }
