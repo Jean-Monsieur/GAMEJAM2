@@ -2,30 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DDR : MonoBehaviour
+public class DDRtraining : MonoBehaviour
 {
     //Variables
-    public float gravity = 20.0F;
     private Vector3 move;
 
-    RectTransform DDRleft;
+    public GameObject DDRleft;
     double m_XAxis, m_YAxis;
 
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         //Fetch the RectTransform from the GameObject
-        DDRleft = GetComponent<RectTransform>();
+
+        //DDRleft = GetComponent<RectTransform>();
+
         //Initiate the x and y positions
-        move = DDRleft.position;
+        //move = DDRleft.position;
+        move = DDRleft.GetComponent<RectTransform>().position;
     }
 
+    // Update is called once per frame
     void Update()
     {
         m_YAxis = move.y - 1.0;
         move.Set(move.x, (float)m_YAxis, move.z);
-        DDRleft.SetPositionAndRotation();
-
-        //Applying gravity to the controller
-        moveDirection.y -= gravity * Time.deltaTime;
+        DDRleft.GetComponent<RectTransform>().SetPositionAndRotation(move, DDRleft.GetComponent<RectTransform>().rotation);
     }
 }
