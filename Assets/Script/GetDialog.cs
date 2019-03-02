@@ -11,6 +11,8 @@ public class GetDialog : MonoBehaviour
     public string Nom;
     public string TypeDialog;
     private string Dialog;
+    [SerializeField]
+    private Text Dialog_Text;
 
     // Start is called before the first frame update
     void Start()
@@ -21,9 +23,12 @@ public class GetDialog : MonoBehaviour
             var textFile = Resources.Load<TextAsset>("Dialog/"+Nom+"/"+TypeDialog);
             if (textFile == null)
                 throw new InvalidOperationException("Fichier inexistant");
-            
+
             else
+            {
                 Dialog = textFile.text;
+                Dialog_Text.text = Dialog.ToString();
+            }
         }
         catch (InvalidOperationException e)
         {
