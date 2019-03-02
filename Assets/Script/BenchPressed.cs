@@ -28,7 +28,9 @@ public class BenchPressed : MonoBehaviour
 
     [SerializeField]
     Text startTimer;
-
+	
+	[SerializeField]
+	GameObject SpaceBarIcon;
 
     int difficulty;
     int Strenght;
@@ -37,6 +39,7 @@ public class BenchPressed : MonoBehaviour
     int releaseRatio;
     bool start ;
     bool timerFinished;
+	bool isActive;
 
 
     // Start is called before the first frame update
@@ -49,7 +52,7 @@ public class BenchPressed : MonoBehaviour
         hitPosition = 1;
         hit = 0;
         releaseRatio = 0;
-
+		isActive = true;
         timerFinished = false;
         start = false;
         difficulty = 75;
@@ -58,14 +61,17 @@ public class BenchPressed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+			
         if (Input.GetButtonDown("Hit") && Gamefinished == false)
 
         {
 
+
             
             if (timerFinished == true)
             {
+				SpaceBarIcon.SetActive(isActive);
+				isActive = !isActive;
                 hit += 1;
                 //yPos += 2;
                 //this.transform.position = (new Vector3(this.transform.position.x, yPos, this.transform.position.z));
@@ -76,6 +82,7 @@ public class BenchPressed : MonoBehaviour
                     hit = 0;
                 }
             }
+
 
             if (start == false)
             {
