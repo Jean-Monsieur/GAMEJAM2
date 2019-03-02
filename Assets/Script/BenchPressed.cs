@@ -48,7 +48,7 @@ public class BenchPressed : MonoBehaviour
         hitPosition = 1;
         hit = 0;
         releaseRatio = 0;
-        StartCoroutine(Timer());
+       
         timerFinished = false;
         start = false;
         difficulty = 75;
@@ -82,6 +82,7 @@ public class BenchPressed : MonoBehaviour
                 start = true;
                 readyScreen.SetActive(false);  
                 StartCoroutine(StartGame());
+                
             }
         }
 
@@ -134,6 +135,7 @@ public class BenchPressed : MonoBehaviour
             {
                 startTimer.text = "";
                 timerFinished = true;
+                StartCoroutine(Timer());
             }
 
         }
