@@ -107,9 +107,10 @@ public class BenchPressed : MonoBehaviour
 
         if (hitPosition == maxLevel)
         {
-            // GameMaster.GetComponent<GameMaster>().setStrenght(5);
+           
             WinScreen.SetActive(true);
             Gamefinished = true;
+            GameMaster.GetComponent<GameMaster>().setStrenght(5);
 
 
 

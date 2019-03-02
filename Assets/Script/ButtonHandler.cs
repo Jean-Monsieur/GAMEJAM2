@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject  Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, travailler;
+    private GameObject Apart, PersistentUI, Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, travailler;
 
     
 
@@ -22,10 +22,20 @@ public class ButtonHandler : MonoBehaviour
     }
     public void Click_StartButton()
     {
-        calendrier.SetActive(true);
+        Apart.SetActive(true);
+        //PersistentUI.SetActive(true);
         MainMenu.SetActive(false);
 
     }
+    public void Click_Continue()
+    {
+        calendrier.SetActive(true);
+        PersistentUI.SetActive(true);
+        Apart.SetActive(false);
+
+
+    }
+
     public void Click_QuitButton()
     {
         Application.Quit();
@@ -68,6 +78,8 @@ public class ButtonHandler : MonoBehaviour
         Gym.SetActive(true);
 
     }
+
+    
 
 
     IEnumerator TexteGrossis(GameObject Endroit )
