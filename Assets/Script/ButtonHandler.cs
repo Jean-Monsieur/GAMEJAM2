@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Statistique, MainMenu, Gym;
+    private GameObject Statistique, MainMenu, Gym, calendrier;
 
     public void Click_StatsMenu()
     {
@@ -18,7 +18,7 @@ public class ButtonHandler : MonoBehaviour
     }
     public void Click_StartButton()
     {
-        Gym.SetActive(true);
+        calendrier.SetActive(true);
         MainMenu.SetActive(false);
 
     }
@@ -27,4 +27,10 @@ public class ButtonHandler : MonoBehaviour
         Application.Quit();
     }
 
+    public void Click_Gym()
+    {
+        calendrier.SetActive(false);
+        Gym.SetActive(true);
+        Application.Quit();
+    }
 }
