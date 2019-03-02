@@ -5,30 +5,27 @@ using UnityEngine;
 public class DDR : MonoBehaviour
 {
     //Variables
-    public float speed = 6.0F;
-    public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
-    private Vector3 moveDirection = Vector3.zero;
+    private Vector3 move;
+
+    RectTransform DDRleft;
+    double m_XAxis, m_YAxis;
+
+    private void Start()
+    {
+        //Fetch the RectTransform from the GameObject
+        DDRleft = GetComponent<RectTransform>();
+        //Initiate the x and y positions
+        move = DDRleft.position;
+    }
 
     void Update()
     {
-        CharacterController controller = GetComponent<CharacterController>();
-        // is the controller on the ground?
-        if (controller.isGrounded)
-        {
-            //Feed moveDirection with input.
-            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            moveDirection = transform.TransformDirection(moveDirection);
-            //Multiply it by speed.
-            moveDirection *= speed;
-            //Jumping
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+        m_YAxis = move.y - 1.0;
+        move.Set(move.x, (float)m_YAxis, move.z);
+        DDRleft.SetPositionAndRotation();
 
-        }
         //Applying gravity to the controller
         moveDirection.y -= gravity * Time.deltaTime;
-        //Making the character move
-        controller.Move(moveDirection * Time.deltaTime);
     }
 }
