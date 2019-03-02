@@ -1,0 +1,33 @@
+0000000000000000000000000000000000000000 e96e8ab6034185a3cbe4082c88adf151919fef8a mpoirel <mathieu_poirel@hotmail.com> 1551473753 -0500	clone: from https://github.com/kyrhatv/GamejamWinter2k19.git
+e96e8ab6034185a3cbe4082c88adf151919fef8a 9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 mpoirel <mathieu_poirel@hotmail.com> 1551478215 -0500	commit: no message
+9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 mpoirel <mathieu_poirel@hotmail.com> 1551479225 -0500	checkout: moving from master to Dvelopp
+9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 mpoirel <mathieu_poirel@hotmail.com> 1551480126 -0500	checkout: moving from Dvelopp to MP_ChestBrasLevel
+9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 b7398f944f97744582b9f4ab5cf813ce83052889 mpoirel <mathieu_poirel@hotmail.com> 1551480198 -0500	commit: Ajout de la scene du niveauTraining
+b7398f944f97744582b9f4ab5cf813ce83052889 1494d1bc5cdd5cfb2ff90c43ef92bf226df6b897 mpoirel <mathieu_poirel@hotmail.com> 1551480323 -0500	commit: no message
+1494d1bc5cdd5cfb2ff90c43ef92bf226df6b897 651f25a6bf7ac82d19f769dce646c73254467615 mpoirel <mathieu_poirel@hotmail.com> 1551491009 -0500	commit: AJout d'image et script benchpressed
+651f25a6bf7ac82d19f769dce646c73254467615 f5015f3f8ae3774eea125f74412397e673bef799 mpoirel <mathieu_poirel@hotmail.com> 1551496789 -0500	pull origin Dvelopp: Merge made by the 'recursive' strategy.
+f5015f3f8ae3774eea125f74412397e673bef799 e6c0d735ffcf9565d3de7ed26f91ecaa6b5e3bb4 mpoirel <mathieu_poirel@hotmail.com> 1551496806 -0500	commit: rewwe
+e6c0d735ffcf9565d3de7ed26f91ecaa6b5e3bb4 9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 mpoirel <mathieu_poirel@hotmail.com> 1551496821 -0500	checkout: moving from MP_ChestBrasLevel to master
+9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 1494d1bc5cdd5cfb2ff90c43ef92bf226df6b897 mpoirel <mathieu_poirel@hotmail.com> 1551496832 -0500	pull origin master: Fast-forward
+1494d1bc5cdd5cfb2ff90c43ef92bf226df6b897 9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 mpoirel <mathieu_poirel@hotmail.com> 1551496847 -0500	checkout: moving from master to Dvelopp
+9bcfc58887d53a91e2c12911b968ab5d1ee4c0c7 85b3fa6db82f6d626779b76acddcab85eb94f477 mpoirel <mathieu_poirel@hotmail.com> 1551496869 -0500	pull origin Dvelopp: Fast-forward
+85b3fa6db82f6d626779b76acddcab85eb94f477 e6c0d735ffcf9565d3de7ed26f91ecaa6b5e3bb4 mpoirel <mathieu_poirel@hotmail.com> 1551496886 -0500	checkout: moving from Dvelopp to MP_ChestBrasLevel
+e6c0d735ffcf9565d3de7ed26f91ecaa6b5e3bb4 85b3fa6db82f6d626779b76acddcab85eb94f477 mpoirel <mathieu_poirel@hotmail.com> 1551497890 -0500	checkout: moving from MP_ChestBrasLevel to Dvelopp
+85b3fa6db82f6d626779b76acddcab85eb94f477 058fcfb10d265dcacb2f603f9d5e28f67874c19d mpoirel <mathieu_poirel@hotmail.com> 1551497896 -0500	pull origin Dvelopp: Fast-forward
+058fcfb10d265dcacb2f603f9d5e28f67874c19d e6c0d735ffcf9565d3de7ed26f91ecaa6b5e3bb4 mpoirel <mathieu_poirel@hotmail.com> 1551497899 -0500	checkout: moving from Dvelopp to MP_ChestBrasLevel
+e6c0d735ffcf9565d3de7ed26f91ecaa6b5e3bb4 3da847a581761e14756308d1bd97029e22cfef77 mpoirel <mathieu_poirel@hotmail.com> 1551498048 -0500	merge Dvelopp: Merge made by the 'recursive' strategy.
+3da847a581761e14756308d1bd97029e22cfef77 3a745bdd9fec2c9551d29712c92f71f70744f41a mpoirel <mathieu_poirel@hotmail.com> 1551498647 -0500	pull origin Dvelopp: Fast-forward
+3a745bdd9fec2c9551d29712c92f71f70744f41a c8417f99ecb2959373cd53f4587585d387153a7d mpoirel <mathieu_poirel@hotmail.com> 1551498681 -0500	commit: no message
+c8417f99ecb2959373cd53f4587585d387153a7d 1494d1bc5cdd5cfb2ff90c43ef92bf226df6b897 mpoirel <mathieu_poirel@hotmail.com> 1551498704 -0500	checkout: moving from MP_ChestBrasLevel to master
+1494d1bc5cdd5cfb2ff90c43ef92bf226df6b897 058fcfb10d265dcacb2f603f9d5e28f67874c19d mpoirel <mathieu_poirel@hotmail.com> 1551498714 -0500	pull origin master: Fast-forward
+058fcfb10d265dcacb2f603f9d5e28f67874c19d 058fcfb10d265dcacb2f603f9d5e28f67874c19d mpoirel <mathieu_poirel@hotmail.com> 1551498717 -0500	checkout: moving from master to Dvelopp
+058fcfb10d265dcacb2f603f9d5e28f67874c19d 3a745bdd9fec2c9551d29712c92f71f70744f41a mpoirel <mathieu_poirel@hotmail.com> 1551498722 -0500	pull origin Dvelopp: Fast-forward
+3a745bdd9fec2c9551d29712c92f71f70744f41a c8417f99ecb2959373cd53f4587585d387153a7d mpoirel <mathieu_poirel@hotmail.com> 1551498735 -0500	checkout: moving from Dvelopp to MP_ChestBrasLevel
+c8417f99ecb2959373cd53f4587585d387153a7d 59764a9258f12f1c80c9297c83f5b7f56c00b5bf mpoirel <mathieu_poirel@hotmail.com> 1551500924 -0500	commit: Dossier ressources pour anim
+59764a9258f12f1c80c9297c83f5b7f56c00b5bf af1924cea5e0af48def58fe9734d4cab613470e7 mpoirel <mathieu_poirel@hotmail.com> 1551500968 -0500	pull origin Dvelopp: Merge made by the 'recursive' strategy.
+af1924cea5e0af48def58fe9734d4cab613470e7 3a745bdd9fec2c9551d29712c92f71f70744f41a mpoirel <mathieu_poirel@hotmail.com> 1551501009 -0500	checkout: moving from MP_ChestBrasLevel to Dvelopp
+3a745bdd9fec2c9551d29712c92f71f70744f41a 952085191dc37132d5c94cbb888d65cd0dc656f6 mpoirel <mathieu_poirel@hotmail.com> 1551501020 -0500	pull origin Dvelopp: Fast-forward
+952085191dc37132d5c94cbb888d65cd0dc656f6 058fcfb10d265dcacb2f603f9d5e28f67874c19d mpoirel <mathieu_poirel@hotmail.com> 1551501030 -0500	checkout: moving from Dvelopp to master
+058fcfb10d265dcacb2f603f9d5e28f67874c19d 3a745bdd9fec2c9551d29712c92f71f70744f41a mpoirel <mathieu_poirel@hotmail.com> 1551501037 -0500	pull origin master: Fast-forward
+3a745bdd9fec2c9551d29712c92f71f70744f41a af1924cea5e0af48def58fe9734d4cab613470e7 mpoirel <mathieu_poirel@hotmail.com> 1551501041 -0500	checkout: moving from master to MP_ChestBrasLevel
+3a745bdd9fec2c9551d29712c92f71f70744f41a 3b205b8c0feec13b1ecda1f469e3ece1d3413900 kyrhaTV <kyrha1719@gmail.com> 1551504423 -0500	commit: initial commit
