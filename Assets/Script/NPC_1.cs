@@ -43,7 +43,7 @@ public class NPC_1 : MonoBehaviour
     {
         //Adapter les valeurs par rapport à la semaine
         
-        double constWeek = week * 0.3;
+        double constWeek = week * 0.2;
         int intelNeeded = (int)Math.Round(intel + (intel * constWeek));
         
     }
