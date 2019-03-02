@@ -37,7 +37,7 @@ public class DDRtraining : MonoBehaviour
             if(m_YAxis >= (statArrowY + 40.0))
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow))
-            {
+            { 
                 Debug.Log(m_YAxis);
                 this.enabled = false;
             }
