@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Statistique, MainMenu;
+    private GameObject Statistique, MainMenu, Gym;
 
     public void Click_StatsMenu()
     {
@@ -18,7 +18,7 @@ public class ButtonHandler : MonoBehaviour
     }
     public void Click_StartButton()
     {
-
+        Gym.SetActive(true);
         MainMenu.SetActive(false);
 
     }
