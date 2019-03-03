@@ -78,11 +78,7 @@ public class BenchPressed : MonoBehaviour
     {
 			
         if (Input.GetButtonDown("Hit") && Gamefinished == false)
-
         {
-
-
-            
             if (timerFinished == true)
             {
 				SpaceBarIcon.SetActive(isActive);
@@ -111,7 +107,6 @@ public class BenchPressed : MonoBehaviour
 
         if (releaseRatio >= difficulty && hitPosition != 1 && Gamefinished == false && start == true)
         {
-            
             hitPosition -= 1;
             player.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Benchpress/BenchAnimation_" + hitPosition.ToString());
             releaseRatio = 0;
@@ -128,10 +123,6 @@ public class BenchPressed : MonoBehaviour
             }
             WinScreen.SetActive(true);
             Gamefinished = true;
-           
-
-
-
         }
 
 
@@ -148,7 +139,6 @@ public class BenchPressed : MonoBehaviour
             GameMaster.GetComponent<GameMaster>().setJour(1);
             Gamefinished = true;
             StartCoroutine(TimerEnd());
-
         }
            
     }
@@ -159,7 +149,6 @@ public class BenchPressed : MonoBehaviour
         audioSource.GetComponent<AudioPlayer>().Play3();
         for (int i = 3; i> 0; i--)
         {
-            
             startTimer.text = i.ToString();
             yield return new WaitForSeconds(1.0f);
             if (i == 1)
@@ -174,9 +163,6 @@ public class BenchPressed : MonoBehaviour
                 audioSource.GetComponent<AudioPlayer>().Play2();
         }
         audioSource.GetComponent<AudioPlayer>().PlayGo();
-        
-
-
     }
 
 
