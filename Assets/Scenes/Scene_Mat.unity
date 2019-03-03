@@ -4962,10 +4962,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d87e5b2a8a962140bdf66b8c065f77b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Nom: NPC_1
+  Nom: FilleStrengh
   TypeDialog: Dialog1
   Dialog_Text: {fileID: 1976943173}
-  Gamemanager: {fileID: 0}
+  Gamemanager: {fileID: 1403171620}
   txtArray: []
 --- !u!1 &1069594856
 GameObject:
@@ -5020,7 +5020,7 @@ MonoBehaviour:
   Nom: NPC_1
   TypeDialog: Dialog1
   Dialog_Text: {fileID: 1824492829}
-  Gamemanager: {fileID: 0}
+  Gamemanager: {fileID: 1403171620}
   txtArray: []
 --- !u!1 &1073655656
 GameObject:
@@ -5248,7 +5248,7 @@ MonoBehaviour:
   Nom: NPC_1
   TypeDialog: Dialog1
   Dialog_Text: {fileID: 1352193931}
-  Gamemanager: {fileID: 0}
+  Gamemanager: {fileID: 1403171620}
   txtArray: []
 --- !u!1 &1178299536
 GameObject:
@@ -6684,7 +6684,7 @@ MonoBehaviour:
   Nom: NPC_1
   TypeDialog: Dialog1
   Dialog_Text: {fileID: 2121370676}
-  Gamemanager: {fileID: 0}
+  Gamemanager: {fileID: 1403171620}
   txtArray: []
 --- !u!1 &1417933848
 GameObject:

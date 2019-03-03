@@ -90,7 +90,7 @@ public class GetDialog : MonoBehaviour
 
     }
 
-    void changeDialogue(string dialogue)
+    public void changeDialogue(string dialogue)
     {
 
         try
@@ -124,4 +124,20 @@ public class GetDialog : MonoBehaviour
 
     }
 
+
+    public void ClickDialogue()
+    {
+        dialogueIndex++;
+        if (dialogueIndex < txtArray.Length)
+            Dialog_Text.text = txtArray[dialogueIndex];
+        else 
+        {
+            Debug.Log("GameFinished");
+        
+        }
+        
+
+
+
+    }
 }
