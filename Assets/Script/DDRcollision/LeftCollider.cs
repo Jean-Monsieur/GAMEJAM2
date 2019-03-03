@@ -21,7 +21,11 @@ public class LeftCollider : MonoBehaviour
             Destroy(collision.gameObject);
             CountArrow++;
             if (CountArrow >= 5)
+            {
+                CountArrow =0;
                 GameControler.fin();
+            }
+                
         }
     }
 

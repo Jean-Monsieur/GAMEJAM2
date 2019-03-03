@@ -15,6 +15,10 @@ public class GameMaster : MonoBehaviour
     [SerializeField]
     public GameObject VM, Baru, Bistro, Dag, Calendrier;
 
+    [SerializeField]
+    public GameObject audioSource;
+
+
     string[] Jours = new string[7];
 
     string bar;
@@ -35,7 +39,8 @@ public class GameMaster : MonoBehaviour
        
     }
 
-    
+    //audioSource.GetComponent<AudioPlayer>().PlayMaleDefeat();
+    //audioSource.GetComponent<AudioPlayer>().PlayMaleWin();
     void Update()
     {
        
@@ -47,9 +52,18 @@ public class GameMaster : MonoBehaviour
                 case "VM":
                     VM.SetActive(true);
                     if (Intel >= 5 && Cardio >= 0 && Strenght >= 15 && Dance >= 0)
+                    {
                         VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        //audioSource.GetComponent<AudioPlayer>().PlayFemaleWin();
+                    }
                     else
+                    {
                         VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+               
+                        //audioSource.GetComponent<AudioPlayer>().PlayFemaleLoss();
+                        
+                    }
+
                     break;
                 case "DAG":
                     Dag.SetActive(true);
@@ -68,9 +82,9 @@ public class GameMaster : MonoBehaviour
                 case "BISS":
                     Bistro.SetActive(true);
                     if (Intel >= 5 && Cardio >= 10 && Strenght >= 5 && Dance >= 5)
-                        Bistro.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        Bistro.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog1");
                     else
-                        Bistro.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                        Bistro.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
             }
 

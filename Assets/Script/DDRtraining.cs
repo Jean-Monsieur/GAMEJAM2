@@ -18,13 +18,10 @@ public class DDRtraining : MonoBehaviour
     private GameObject Parent;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         Arrow = DDRArrow.GetComponent<RectTransform>();
-        move = new Vector3[ARROWMAX];
-        Arrows = new RectTransform[ARROWMAX];
-
-        StartCoroutine(Timer());
+        
     }
 
     // Update is called once per frame
@@ -53,6 +50,23 @@ public class DDRtraining : MonoBehaviour
             
             float temps = Random.Range(3.0f, 5.0f);
             yield return new WaitForSeconds(temps);
+
         }
+        
+    }
+
+    public void StartTimer()
+    {
+        Timerloading();
+        move = new Vector3[ARROWMAX];
+        Arrows = new RectTransform[ARROWMAX];
+        StartCoroutine(Timer());
+
+    }
+
+    IEnumerator Timerloading()
+    {
+
+        yield return new WaitForSeconds(1.0f);
     }
 }

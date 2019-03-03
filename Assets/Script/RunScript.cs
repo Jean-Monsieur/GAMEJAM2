@@ -28,7 +28,7 @@ public class RunScript : MonoBehaviour
     Canvas canvas;
 
     [SerializeField]
-    Text startTimer;
+    Text TimerGo;
 
     [SerializeField]
     private GameObject audioSource;
@@ -43,14 +43,12 @@ public class RunScript : MonoBehaviour
     // Start is called before the first frame update
    public void Commencer()
     {
-        animator.enabled = true;
+        animator.enabled = false;
         shouldExecute = true;
         timer = 11;
         lastInput = "right";
         rb2d = this.GetComponent<Rigidbody2D>();
         rb2d.position = new Vector2(-90f, 0f);
-        movement = new Vector2(50f, 0f);
-        rb2d.AddForce(movement);
         gameFinished = false;
         timerFinished = false;
         StartCoroutine(Countdown());
@@ -67,9 +65,9 @@ public class RunScript : MonoBehaviour
         }
 
         //icitte set ton star
-        if (timerFinished != true && gameFinished != true & gamestarted !=false)
+        if (timerFinished != true && gameFinished != true & gamestarted ==true)
         {
-            movement = new Vector2(50f, 0f);
+            movement = new Vector2(55f, 0f);
             if (lastInput == "right" && Input.GetKey("left"))
             {
                 lastInput = "left";
@@ -96,7 +94,7 @@ public class RunScript : MonoBehaviour
                 animator.enabled = false;
                 rb2d.velocity = new Vector2(0f, 0f);
                 GameMaster.GetComponent<GameMaster>().setJour(1);
-                LooseScreen.SetActive(true);
+                //LooseScreen.SetActive(true);
                 StartCoroutine(TimerEnd());
 
             }
@@ -105,10 +103,11 @@ public class RunScript : MonoBehaviour
 
     IEnumerator Countdown()
     {
+        StartTimer.text = "";
         audioSource.GetComponent<AudioPlayer>().Play3();
         for (int i = 3; i > 0; i--)
         {
-            startTimer.text = i.ToString();
+            TimerGo.text = i.ToString();
             yield return new WaitForSeconds(1.0f);
             if (i == 2)
                 audioSource.GetComponent<AudioPlayer>().Play1();
@@ -116,12 +115,16 @@ public class RunScript : MonoBehaviour
                 audioSource.GetComponent<AudioPlayer>().Play2();
         }
         gamestarted = true;
+        animator.enabled = true;
+        TimerGo.text = "";
         StartCoroutine(Timer());
         audioSource.GetComponent<AudioPlayer>().PlayGo();
     }
 
     IEnumerator Timer()
     {
+        movement = new Vector2(50f, 0f);
+        rb2d.AddForce(movement);
         audioSource.GetComponent<AudioPlayer>().PlayGo();
         for (int i = 6; i >= 0; i--)
         {

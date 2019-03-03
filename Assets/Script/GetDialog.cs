@@ -17,6 +17,11 @@ public class GetDialog : MonoBehaviour
     [SerializeField]
     private GameObject Gamemanager;
 
+    [SerializeField]
+    private GameObject CanvasFin;
+
+    
+
     private int dialogueIndex;
 
     public string[] txtArray;
@@ -130,8 +135,15 @@ public class GetDialog : MonoBehaviour
         dialogueIndex++;
         if (dialogueIndex < txtArray.Length)
             Dialog_Text.text = txtArray[dialogueIndex];
-        else 
+        else
         {
+            CanvasFin.SetActive(true);
+            if (TypeDialog == "Dialog2")
+                CanvasFin.transform.GetChild(1).GetComponent<GetDialog>().TypeDialog = "Fin_Loose";
+            else
+                CanvasFin.transform.GetChild(1).GetComponent<GetDialog>().TypeDialog = "Fin_Win";
+
+
             Debug.Log("GameFinished");
         
         }
@@ -140,4 +152,15 @@ public class GetDialog : MonoBehaviour
 
 
     }
-}
+
+    public void ClickDialogueMike2()
+        {
+            dialogueIndex++;
+            if (dialogueIndex < txtArray.Length)
+                Dialog_Text.text = txtArray[dialogueIndex];
+            else
+            {
+                Application.Quit();
+            }
+        }
+    }
