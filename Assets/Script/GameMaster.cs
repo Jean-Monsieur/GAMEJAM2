@@ -12,7 +12,12 @@ public class GameMaster : MonoBehaviour
 
     //private string[] Jours = new Jours[] ;
 
+    [SerializeField]
+    public GameObject VM, Baru, Bistro, Dag, Calendrier;
+
     string[] Jours = new string[7];
+
+    string bar;
 
     void Start()
     {
@@ -21,20 +26,55 @@ public class GameMaster : MonoBehaviour
         Jours[2] = "Mercredi";
         Jours[3] = "Jeudi";
         Jours[4] = "Vendredi";
-        Jours[5] = "Samedi";
+        Jours[5] = "Vendredi Soir";
         Jours[6] = "Dimanche";
 
         jour.text = "Lundi";
-
-        //Week = 2;
-        //week.text = Week.ToString();
-
+        bar = this.GetComponent<CurrentBarScript>().getBarString();
+        
+       
     }
 
     
     void Update()
     {
         
+        if (Jour == 5)
+        {
+            Calendrier.SetActive(false);
+            switch (bar)
+            {
+                case "VM":
+                    VM.SetActive(true);
+                    if (Intel >= 5 && Cardio >= 0 && Strenght >= 15 && Dance >= 0)
+                        VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                    break;
+                case "DAG":
+                    Dag.SetActive(true);
+                    if (Intel >= 0 && Cardio >= 5 && Strenght >= 5 && Dance >= 10)
+                        Dag.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        Dag.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                    break;
+                case "BARU":
+                    Baru.SetActive(true);
+                    if (Intel >= 15 && Cardio >= 0 && Strenght >= 0 && Dance >= 5)
+                        Baru.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        Baru.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                    break;
+                case "BISS":
+                    Bistro.SetActive(true);
+                    if (Intel >= 5 && Cardio >= 10 && Strenght >= 5 && Dance >= 5)
+                        Bistro.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        Bistro.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                    break;
+            }
+
+        }
     }
 
     public void setStrenght(int _strenght)

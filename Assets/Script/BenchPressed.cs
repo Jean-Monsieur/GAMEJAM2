@@ -33,6 +33,9 @@ public class BenchPressed : MonoBehaviour
 	GameObject SpaceBarIcon;
 
     [SerializeField]
+    Canvas canvas;
+
+    [SerializeField]
     private GameObject audioSource;
 
     [SerializeField]
@@ -49,8 +52,14 @@ public class BenchPressed : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+
+    public void Commencer()
     {
+
+        SpaceBarIcon.SetActive(true);
+        readyScreen.SetActive(true);
+        player.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Benchpress/BenchAnimation_1");
+        WinScreen.SetActive(false);
         Gamefinished = false;
         StartYPos = this.transform.position.y;
         yPos = StartYPos;
@@ -58,12 +67,10 @@ public class BenchPressed : MonoBehaviour
         hitPosition = 1;
         hit = 0;
         releaseRatio = 0;
-		isActive = true;
+        isActive = true;
         timerFinished = false;
         start = false;
         difficulty = 75;
-
-
     }
 
     // Update is called once per frame
@@ -177,7 +184,8 @@ public class BenchPressed : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
 
         Menu.SetActive(true);
-        this.gameObject.SetActive(false);
+        LooseScreen.SetActive(false);
+        canvas.gameObject.SetActive(false);
 
     }
 }

@@ -21,6 +21,9 @@ public class RunScript : MonoBehaviour
     [SerializeField]
     GameObject Menu;
 
+    [SerializeField]
+    Canvas canvas;
+
     private int timer;
     private Rigidbody2D rb2d;
     private string lastInput;
@@ -28,19 +31,19 @@ public class RunScript : MonoBehaviour
     private bool timerFinished, gameFinished, shouldExecute;
 
     // Start is called before the first frame update
-    void Start()
+   public void Commencer()
     {
+        animator.enabled = true;
         shouldExecute = true;
         timer = 11;
         lastInput = "right";
         rb2d = this.GetComponent<Rigidbody2D>();
+        rb2d.position = new Vector2(-90f, 0f);
         movement = new Vector2(50f, 0f);
         rb2d.AddForce(movement);
         gameFinished = false;
         timerFinished = false;
         StartCoroutine(Timer());
-
-
     }
 
     // Update is called once per frame
@@ -77,6 +80,7 @@ public class RunScript : MonoBehaviour
             }
             if (timerFinished && shouldExecute)
             {
+                shouldExecute = false;
                 animator.enabled = false;
                 rb2d.velocity = new Vector2(0f, 0f);
                 LooseScreen.SetActive(true);
@@ -103,9 +107,9 @@ public class RunScript : MonoBehaviour
     IEnumerator TimerEnd()
     {
         yield return new WaitForSeconds(3.0f);
-
+        LooseScreen.SetActive(false);
         Menu.SetActive(true);
-        this.gameObject.SetActive(false);
+        canvas.gameObject.SetActive(false);
 
     }
 }
