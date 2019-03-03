@@ -67,5 +67,21 @@ public class AudioPlayer : MonoBehaviour
     {
         audioSource.PlayOneShot(maleYouGotIt, 3f);
     }
+    public void PlayFemaleWin()
+    {
+        audioSource.PlayOneShot(femaleMyPleasure, 2.5F);
+    }
+    public void PlayFemaleLoss()
+    {
+        audioSource.PlayOneShot(femaleUgh, 2.5F);
+    }
+    public void PlayMaleDefeat()
+    {
+        audioSource.PlayOneShot(maleReally, 2.5F);
+    }
+    public void PlayMaleWin()
+    {
+        audioSource.PlayOneShot(maleYouGotIt, 2.5F);
+    }
 
 }
