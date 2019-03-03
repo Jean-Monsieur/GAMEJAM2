@@ -28,7 +28,7 @@ public class ScoreHandler : MonoBehaviour
     {
         text.text = "Score: " + points.ToString() + "/10";
         if (Fin == 4)
-        {   if (points > 10)
+        {   if (points >= 10)
             {
                 textSucces.enabled = true;
                 GameManager.GetComponent<GameMaster>().setDance(5);

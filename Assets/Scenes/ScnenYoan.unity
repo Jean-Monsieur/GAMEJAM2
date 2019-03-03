@@ -2307,10 +2307,6 @@ MonoBehaviour:
   Menu: {fileID: 1116289744}
   Canvas: {fileID: 401908426}
   GameManager: {fileID: 1403171620}
-  Arrow1: {fileID: 0}
-  Arrow2: {fileID: 0}
-  Arrow3: {fileID: 0}
-  Arrow4: {fileID: 0}
 --- !u!114 &425696118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6870,7 +6866,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1116289745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11736,7 +11732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2041177129
 MonoBehaviour:
   m_ObjectHideFlags: 0
