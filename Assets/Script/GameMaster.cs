@@ -12,7 +12,12 @@ public class GameMaster : MonoBehaviour
 
     //private string[] Jours = new Jours[] ;
 
+    [SerializeField]
+    public GameObject VM, Baru, Bistro, Dag;
+
     string[] Jours = new string[7];
+
+    string bar;
 
     void Start()
     {
@@ -25,7 +30,7 @@ public class GameMaster : MonoBehaviour
         Jours[6] = "Dimanche";
 
         jour.text = "Lundi";
-
+        bar = this.GetComponent<CurrentBarScript>().getBarString();
         //Week = 2;
         //week.text = Week.ToString();
 
@@ -34,7 +39,26 @@ public class GameMaster : MonoBehaviour
     
     void Update()
     {
-        
+        bar = this.GetComponent<CurrentBarScript>().getBarString();
+        if (Jour == 6)
+        {
+            switch (bar)
+            {
+                case "VM":
+                    VM.SetActive(true);
+                    break;
+                case "DAG":
+                    Dag.SetActive(true);
+                    break;
+                case "BARU":
+                    Bistro.SetActive(true);
+                    break;
+                case "BISS":
+                    Bistro.SetActive(true);
+                    break;
+            }
+
+        }
     }
 
     public void setStrenght(int _strenght)
