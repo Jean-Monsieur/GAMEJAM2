@@ -7,36 +7,52 @@ public class DDRtraining : MonoBehaviour
 {
     //Variables
     //public Text text;
-    private Vector3 move;
-    public GameObject DDRArrow;
+   public GameObject DDRArrow;
     private RectTransform Arrow;
-    private RectTransform Arrows;
+    private RectTransform[] Arrows;
+    private Vector3[] move;
 
-    double m_YAxis;
-    private int points = 0;
+    private static int ARROWMAX = 5;
+
+    [SerializeField]
+    private GameObject Parent;
 
     // Start is called before the first frame update
     void Start()
     {
         Arrow = DDRArrow.GetComponent<RectTransform>();
-        move = Arrow.position;
+        move = new Vector3[ARROWMAX];
+        Arrows = new RectTransform[ARROWMAX];
+
+        StartCoroutine(Timer());
     }
 
     // Update is called once per frame
     void Update()
     {
-
-
-        m_YAxis = move.y - 2.0;
-        move.Set(move.x, (float)m_YAxis, move.z);
-        Arrow.SetPositionAndRotation(move, Arrow.rotation);
-        
+        for(int i = 0; i < ARROWMAX; i++)
+        {
+            if(Arrows[i] != null)
+            {
+                move[i].Set(move[i].x, (float)(move[i].y - 1.6), move[i].z);
+                Arrows[i].SetPositionAndRotation(move[i], Arrows[i].rotation);
+            }
+        }
     }
 
-    public void ajouterPoint()
+    public void ajouterPoint() { }
+
+    IEnumerator Timer()
     {
-        points += 1;
-        Debug.Log(points);
+        yield return new WaitForSeconds(Random.Range(1.0f, 5.0f));
+
+        for (int x = 0; x < ARROWMAX; x++)
+        {
+            Arrows[x] = (Instantiate(Arrow, Arrow.position, Arrow.rotation, Parent.transform));
+            move[x] = (Arrows[x].position);
+            
+            float temps = Random.Range(3.0f, 5.0f);
+            yield return new WaitForSeconds(temps);
+        }
     }
-    
 }

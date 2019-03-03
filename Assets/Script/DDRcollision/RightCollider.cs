@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class RightCollider : MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D other)
+    public ScoreHandler GameControler;
+    private int CountArrow;
+
+    void start()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Debug.Log("Plus 1 pts!");
-            this.enabled = false;
-        }
+        GameControler = GetComponent<ScoreHandler>();
     }
 
     void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.Log("Plus 1 pts!");
-            this.enabled = false;
+            GameControler.ajouterPoint();
+            Destroy(collision.gameObject);
+            CountArrow++;
+            if (CountArrow >= 5)
+                GameControler.fin();
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Debug.Log("Plus 1 pts!");
-            this.enabled = false;
-        }
+
+        CountArrow++;
+        if (CountArrow >= 5)
+            GameControler.fin();
+        Destroy(collision.gameObject, 0.3f);
     }
 }

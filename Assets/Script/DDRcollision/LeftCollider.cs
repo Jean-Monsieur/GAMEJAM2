@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class LeftCollider : MonoBehaviour
 {
-    public DDRtraining GameControler;
+    public ScoreHandler GameControler;
+    private int CountArrow;
 
     void start()
     {
-        GameControler = GetComponent<DDRtraining>();
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            GameControler.ajouterPoint();
-            Debug.Log("Plus 1 pts!");
-            this.enabled = false;
-        }
+        GameControler = GetComponent<ScoreHandler>();
+        CountArrow = 0;
     }
 
     void OnTriggerStay2D(Collider2D collision)
@@ -26,18 +18,19 @@ public class LeftCollider : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             GameControler.ajouterPoint();
-            Debug.Log("Plus 1 pts!");
-            this.enabled = false;
+            Destroy(collision.gameObject);
+            CountArrow++;
+            if (CountArrow >= 5)
+                GameControler.fin();
         }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            GameControler.ajouterPoint();
-            Debug.Log("Plus 1 pts!");
-            this.enabled = false;
-        }
+
+        CountArrow++;
+        if (CountArrow >= 5)
+            GameControler.fin();
+        Destroy(collision.gameObject, 0.3f);
     }
 }
