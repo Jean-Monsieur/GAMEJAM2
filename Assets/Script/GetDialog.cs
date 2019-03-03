@@ -57,4 +57,10 @@ public class GetDialog : MonoBehaviour
     {
         return Dialog.Split('#');
     }
+
+    public void ClickDialogue()
+    {
+
+    }
+
 }
