@@ -18,17 +18,10 @@ public class ScoreHandler : MonoBehaviour
     [SerializeField]
     private GameObject GameManager;
 
-    [SerializeField]
-    private GameObject Arrow1;
-    [SerializeField]
-    private GameObject Arrow2;
-    [SerializeField]
-    private GameObject Arrow3;
-    [SerializeField]
-    private GameObject Arrow4;
+    
 
 
-    void Start()
+    void Awake()
     {
         textSucces.enabled = false;
         textDefaite.enabled = false;
