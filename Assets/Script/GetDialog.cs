@@ -27,7 +27,8 @@ public class GetDialog : MonoBehaviour
             else
             {
                 Dialog = textFile.text;
-                Dialog_Text.text = Dialog.ToString();
+                //Dialog_Text.text = Dialog.ToString();
+                Dialog_Text.text = getDialog()[0];
             }
         }
         catch (InvalidOperationException e)

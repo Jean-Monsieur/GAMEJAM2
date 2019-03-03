@@ -73,8 +73,7 @@ public class BenchPressed : MonoBehaviour
 				SpaceBarIcon.SetActive(isActive);
 				isActive = !isActive;
                 hit += 1;
-                //yPos += 2;
-                //this.transform.position = (new Vector3(this.transform.position.x, yPos, this.transform.position.z));
+                
                 if (hit == 2)
                 {
                     hitPosition += 1;
@@ -97,8 +96,7 @@ public class BenchPressed : MonoBehaviour
 
         if (releaseRatio >= difficulty && hitPosition != 1 && Gamefinished == false && start == true)
         {
-            //yPos -= 0.1f;
-            //this.transform.position = (new Vector3(this.transform.position.x, yPos, this.transform.position.z));
+            
             hitPosition -= 1;
             player.GetComponent<Image>().sprite = Resources.Load<Sprite>("Sprites/Benchpress/BenchAnimation_" + hitPosition.ToString());
             releaseRatio = 0;
@@ -107,10 +105,15 @@ public class BenchPressed : MonoBehaviour
 
         if (hitPosition == maxLevel)
         {
-           
+            if (Gamefinished == false)
+            {
+                GameMaster.GetComponent<GameMaster>().setStrenght(5);
+                StartCoroutine(GameMaster.GetComponent<ButtonHandler>().TexteGrossis(this.transform.parent.gameObject));
+                
+            }
             WinScreen.SetActive(true);
             Gamefinished = true;
-            GameMaster.GetComponent<GameMaster>().setStrenght(5);
+           
 
 
 
