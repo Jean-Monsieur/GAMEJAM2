@@ -1027,8 +1027,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: -159}
-  m_SizeDelta: {x: 182.3, y: 318}
+  m_AnchoredPosition: {x: 154, y: -94}
+  m_SizeDelta: {x: 391.3, y: 521.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &281281574
 MonoBehaviour:
@@ -1050,7 +1050,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4781f2fe7532fd14d8f60972cc1bae83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: da333d29f52513d4cbe1143af80de4be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1320,6 +1320,7 @@ GameObject:
   - component: {fileID: 349606914}
   - component: {fileID: 349606913}
   - component: {fileID: 349606912}
+  - component: {fileID: 349606915}
   m_Layer: 5
   m_Name: Bare
   m_TagString: Untagged
@@ -1365,6 +1366,7 @@ MonoBehaviour:
   player: {fileID: 413049429}
   startTimer: {fileID: 1218739335}
   SpaceBarIcon: {fileID: 675935313}
+  audioSource: {fileID: 1594512044}
 --- !u!114 &349606913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,6 +1404,102 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349606910}
   m_CullTransparentMesh: 0
+--- !u!82 &349606915
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349606910}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &350707373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5703,8 +5801,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: -159}
-  m_SizeDelta: {x: 182.3, y: 318}
+  m_AnchoredPosition: {x: -189, y: -137}
+  m_SizeDelta: {x: 411.9, y: 411.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389056154
 MonoBehaviour:
@@ -5726,7 +5824,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4781f2fe7532fd14d8f60972cc1bae83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d48116185e5a0684286438e301756076, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6005,6 +6103,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458704485}
   - component: {fileID: 1458704486}
+  - component: {fileID: 1458704487}
   m_Layer: 5
   m_Name: Friend
   m_TagString: Untagged
@@ -6048,6 +6147,19 @@ MonoBehaviour:
   Nom: AmiDouche
   TypeDialog: Scenario1
   Dialog_Text: {fileID: 385922413}
+--- !u!114 &1458704487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458704484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5eb95e8bc41044182c714e57cf8b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1594512044}
 --- !u!1 &1473440819
 GameObject:
   m_ObjectHideFlags: 0
@@ -6759,7 +6871,7 @@ GameObject:
   - component: {fileID: 1594512046}
   - component: {fileID: 1594512045}
   m_Layer: 0
-  m_Name: ButtonAudioSource
+  m_Name: OneShotAudioSource
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6778,6 +6890,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSound: {fileID: 8300000, guid: a83f97bd562dd044c8634ed9b9255fc4, type: 3}
+  Sound1: {fileID: 8300000, guid: 74e5645e562ef6d44944823087aff7b1, type: 3}
+  Sound2: {fileID: 8300000, guid: 64b2d8786ab9cfb48a976b7530f34dc3, type: 3}
+  Sound3: {fileID: 8300000, guid: 94abf0130f0014045b6a36aaa5527aef, type: 3}
+  Soundgo: {fileID: 8300000, guid: a9b6c102d7164f24691098175005cc16, type: 3}
+  maleYeah: {fileID: 8300000, guid: 8cbd95a22759ecc43a23c902335d2947, type: 3}
 --- !u!82 &1594512046
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7078,7 +7195,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88, y: 8}
+  m_AnchoredPosition: {x: 307.2, y: 10.8}
   m_SizeDelta: {x: 377.3, y: 149.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1658081803
@@ -7523,6 +7640,7 @@ GameObject:
   - component: {fileID: 1847621376}
   - component: {fileID: 1847621378}
   - component: {fileID: 1847621377}
+  - component: {fileID: 1847621379}
   m_Layer: 5
   m_Name: WinScreen
   m_TagString: Untagged
@@ -7587,6 +7705,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847621375}
   m_CullTransparentMesh: 0
+--- !u!114 &1847621379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847621375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a99508195c39b0478a360d0b67e5fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1594512044}
 --- !u!1 &1913220933
 GameObject:
   m_ObjectHideFlags: 0
@@ -7930,7 +8061,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 88, y: 8}
+  m_AnchoredPosition: {x: 421, y: -18}
   m_SizeDelta: {x: 377.3, y: 149.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023013220
@@ -8358,8 +8489,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: -159}
-  m_SizeDelta: {x: 182.3, y: 318}
+  m_AnchoredPosition: {x: 171.9, y: -128.2}
+  m_SizeDelta: {x: 325.1, y: 325.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2110259687
 MonoBehaviour:
@@ -8381,7 +8512,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4781f2fe7532fd14d8f60972cc1bae83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3d941bb41c59ad44685f3cd076ef5542, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
