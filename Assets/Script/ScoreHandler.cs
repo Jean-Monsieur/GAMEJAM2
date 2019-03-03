@@ -27,9 +27,14 @@ public class ScoreHandler : MonoBehaviour
     [SerializeField]
     private GameObject Arrow4;
 
+    //A AJOUTER
+    [SerializeField]
+    GameObject audioSource;
+
 
     void Start()
     {
+        audioSource.GetComponent<MusicController>().PlayDance();
         textSucces.enabled = false;
         textDefaite.enabled = false;
         text.text = "Score: " + points.ToString() + "/10";

@@ -6,7 +6,7 @@ public class AudioPlayer : MonoBehaviour
 {
 
     [SerializeField]
-    private AudioClip clickSound,Sound1,Sound2,Sound3,Soundgo,maleYeah;
+    private AudioClip clickSound,Sound1,Sound2,Sound3,Soundgo,maleYeah,femaleMyPleasure,femaleUgh,maleReally,maleYouGotIt;
 
 
     private AudioSource audioSource;
@@ -50,6 +50,22 @@ public class AudioPlayer : MonoBehaviour
     public void PlayYeah()
     {
         audioSource.PlayOneShot(maleYeah, 2.5F);
+    }
+    public void PlayFemaleWin()
+    {
+        audioSource.PlayOneShot(femaleMyPleasure, 2.5F);
+    }
+    public void PlayFemaleLoss()
+    {
+        audioSource.PlayOneShot(femaleUgh, 2.5F);
+    }
+    public void PlayMaleDefeat()
+    {
+        audioSource.PlayOneShot(maleReally, 2.5F);
+    }
+    public void PlayMaleWin()
+    {
+        audioSource.PlayOneShot(maleYouGotIt, 2.5F);
     }
 
 }

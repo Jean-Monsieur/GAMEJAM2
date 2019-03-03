@@ -569,6 +569,7 @@ MonoBehaviour:
   TypeDialog: Intro
   Dialog_Text: {fileID: 73464631}
   Gamemanager: {fileID: 1403171620}
+  audioSource: {fileID: 0}
   txtArray: []
 --- !u!114 &88063688
 MonoBehaviour:
@@ -2311,6 +2312,7 @@ MonoBehaviour:
   Arrow2: {fileID: 0}
   Arrow3: {fileID: 0}
   Arrow4: {fileID: 0}
+  audioSource: {fileID: 676845299}
 --- !u!114 &425696118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3791,6 +3793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 676845301}
   - component: {fileID: 676845300}
+  - component: {fileID: 676845302}
   m_Layer: 0
   m_Name: MusicAudioSource
   m_TagString: Untagged
@@ -3908,6 +3911,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &676845302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676845299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ef08a2a864f0d4fa71e9373177bc8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menu: {fileID: 8300000, guid: efd91ade0c3787147ab23a1d9e7cc5dd, type: 3}
+  dance: {fileID: 8300000, guid: 4c0c0fd490fddc745a2e1e004ee03b47, type: 3}
+  club: {fileID: 8300000, guid: 60182edd99bcbf84f8e3b576448af91d, type: 3}
+  chatter: {fileID: 8300000, guid: f571a396a81e8994d9893f564c0bd814, type: 3}
 --- !u!1 &688292968
 GameObject:
   m_ObjectHideFlags: 0
@@ -6344,6 +6363,7 @@ MonoBehaviour:
   TypeDialog: Dialog1
   Dialog_Text: {fileID: 1976943173}
   Gamemanager: {fileID: 1403171620}
+  audioSource: {fileID: 676845299}
   txtArray: []
 --- !u!1 &1065169277
 GameObject:
@@ -6475,6 +6495,7 @@ MonoBehaviour:
   TypeDialog: FilleBistrot
   Dialog_Text: {fileID: 1824492829}
   Gamemanager: {fileID: 1403171620}
+  audioSource: {fileID: 676845299}
   txtArray: []
 --- !u!1 &1070862832
 GameObject:
@@ -7104,6 +7125,7 @@ MonoBehaviour:
   TypeDialog: Dialog1
   Dialog_Text: {fileID: 1352193931}
   Gamemanager: {fileID: 1403171620}
+  audioSource: {fileID: 676845299}
   txtArray: []
 --- !u!1 &1164265481
 GameObject:
@@ -9048,6 +9070,7 @@ MonoBehaviour:
   TypeDialog: FilleDag
   Dialog_Text: {fileID: 2121370676}
   Gamemanager: {fileID: 1403171620}
+  audioSource: {fileID: 676845299}
   txtArray: []
 --- !u!1 &1417933848
 GameObject:
@@ -9399,7 +9422,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1602386151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11736,7 +11759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2041177129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12009,6 +12032,10 @@ MonoBehaviour:
   Sound3: {fileID: 8300000, guid: 94abf0130f0014045b6a36aaa5527aef, type: 3}
   Soundgo: {fileID: 8300000, guid: a9b6c102d7164f24691098175005cc16, type: 3}
   maleYeah: {fileID: 8300000, guid: 8cbd95a22759ecc43a23c902335d2947, type: 3}
+  femaleMyPleasure: {fileID: 8300000, guid: cb96f64fe6806614d8844fda72f173da, type: 3}
+  femaleUgh: {fileID: 8300000, guid: b079a7f306477a04f87f20a03c348c5f, type: 3}
+  maleReally: {fileID: 8300000, guid: dd9af6c68c2f4e84e89bbd92c8ed2bd4, type: 3}
+  maleYouGotIt: {fileID: 8300000, guid: 1cbe509cb6c721342bd5b644db97e380, type: 3}
 --- !u!82 &2079385045
 AudioSource:
   m_ObjectHideFlags: 0
