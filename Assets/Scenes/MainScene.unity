@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6472,7 +6472,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Nom: NPC_1
-  TypeDialog: Dialog1
+  TypeDialog: FilleBistrot
   Dialog_Text: {fileID: 1824492829}
   Gamemanager: {fileID: 1403171620}
   txtArray: []
@@ -9045,7 +9045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Nom: NPC_1
-  TypeDialog: Dialog1
+  TypeDialog: FilleDag
   Dialog_Text: {fileID: 2121370676}
   Gamemanager: {fileID: 1403171620}
   txtArray: []
