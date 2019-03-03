@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311992, g: 0.38074034, b: 0.35872713, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311918, g: 0.3807398, b: 0.35872716, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -717,6 +717,7 @@ MonoBehaviour:
   GameMaster: {fileID: 1144700100}
   LooseScreen: {fileID: 543105577}
   Menu: {fileID: 605002191}
+  canvas: {fileID: 0}
 --- !u!50 &130651727
 Rigidbody2D:
   serializedVersion: 4
@@ -1423,6 +1424,7 @@ MonoBehaviour:
   player: {fileID: 413049429}
   startTimer: {fileID: 1218739335}
   SpaceBarIcon: {fileID: 675935313}
+  canvas: {fileID: 0}
   audioSource: {fileID: 0}
   Menu: {fileID: 0}
 --- !u!114 &349606913
@@ -5321,6 +5323,11 @@ MonoBehaviour:
   cardio: {fileID: 1480726388}
   strenght: {fileID: 1440824903}
   dance: {fileID: 1072276592}
+  VM: {fileID: 0}
+  Baru: {fileID: 0}
+  Bistro: {fileID: 0}
+  Dag: {fileID: 0}
+  Calendrier: {fileID: 0}
 --- !u!4 &1144700103
 Transform:
   m_ObjectHideFlags: 0
@@ -5789,7 +5796,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1295673712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8904,6 +8911,7 @@ MonoBehaviour:
   player: {fileID: 413049429}
   startTimer: {fileID: 1218739335}
   SpaceBarIcon: {fileID: 675935313}
+  canvas: {fileID: 0}
   audioSource: {fileID: 1479755460}
   Menu: {fileID: 605002191}
 --- !u!1 &2082479057
@@ -9042,8 +9050,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63, y: -159}
-  m_SizeDelta: {x: 182.3, y: 318}
+  m_AnchoredPosition: {x: -20.7, y: -179}
+  m_SizeDelta: {x: 232.85, y: 289.23}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2090085896
 MonoBehaviour:
@@ -9065,7 +9073,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 4781f2fe7532fd14d8f60972cc1bae83, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec7306be31877f3458d1a1bee29cc844, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
