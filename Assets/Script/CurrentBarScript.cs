@@ -12,6 +12,7 @@ public class CurrentBarScript : MonoBehaviour
 
     bool toggle = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,9 +47,14 @@ public class CurrentBarScript : MonoBehaviour
     }
 
     public int GetBar()
-    {
-
+    {  
         int bar = Random.Range(1, 5);
+
+        return bar;
+    }
+
+    public string getBarString()
+    {
 
         return bar;
     }

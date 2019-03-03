@@ -35,6 +35,9 @@ public class BenchPressed : MonoBehaviour
     [SerializeField]
     private GameObject audioSource;
 
+    [SerializeField]
+    GameObject Menu;
+
     int difficulty;
     int Strenght;
     int hit;
@@ -136,6 +139,7 @@ public class BenchPressed : MonoBehaviour
         {
             LooseScreen.SetActive(true);
             Gamefinished = true;
+            StartCoroutine(TimerEnd());
 
         }
            
@@ -166,4 +170,15 @@ public class BenchPressed : MonoBehaviour
 
 
     }
+
+
+    IEnumerator TimerEnd()
+    {
+        yield return new WaitForSeconds(3.0f);
+
+        Menu.SetActive(true);
+        this.gameObject.SetActive(false);
+
+    }
 }
+

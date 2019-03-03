@@ -15,6 +15,12 @@ public class RunScript : MonoBehaviour
     [SerializeField]
     GameObject GameMaster;
 
+    [SerializeField]
+    GameObject LooseScreen;
+
+    [SerializeField]
+    GameObject Menu;
+
     private int timer;
     private Rigidbody2D rb2d;
     private string lastInput;
@@ -41,7 +47,7 @@ public class RunScript : MonoBehaviour
     void FixedUpdate()
     {
        
-        if (rb2d.position.x >= 65)
+        if (rb2d.position.x >= 70)
         {
             gameFinished = true;
             rb2d.velocity = new Vector2(0f, 0f);
@@ -73,12 +79,15 @@ public class RunScript : MonoBehaviour
             {
                 animator.enabled = false;
                 rb2d.velocity = new Vector2(0f, 0f);
+                LooseScreen.SetActive(true);
+                StartCoroutine(TimerEnd());
+
             }
         }
     }
     IEnumerator Timer()
     {
-        for (int i = 10; i >= 0; i--)
+        for (int i = 6; i >= 0; i--)
         {
             if(gameFinished!= true)
                 StartTimer.text = i.ToString();
@@ -88,5 +97,15 @@ public class RunScript : MonoBehaviour
 
         }
         
+    }
+
+
+    IEnumerator TimerEnd()
+    {
+        yield return new WaitForSeconds(3.0f);
+
+        Menu.SetActive(true);
+        this.gameObject.SetActive(false);
+
     }
 }

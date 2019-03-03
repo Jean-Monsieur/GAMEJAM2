@@ -15,7 +15,7 @@ public class GetDialog : MonoBehaviour
     private Text Dialog_Text;
 
     [SerializeField]
-    private GameObject ButonHandler;
+    private GameObject Gamemanager;
 
     private int dialogueIndex;
 
@@ -80,11 +80,11 @@ public class GetDialog : MonoBehaviour
         else if (scenario == true)
           {
             scenario = false;
-            changeDialogue("Scenario1");
+            changeDialogue(Gamemanager.GetComponent<CurrentBarScript>().getBarString());
 
            }
         else
-            ButonHandler.GetComponent<ButtonHandler>().Click_Continue();
+            Gamemanager.GetComponent<ButtonHandler>().Click_Continue();
 
 
 

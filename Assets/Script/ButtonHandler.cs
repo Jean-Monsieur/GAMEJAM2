@@ -67,8 +67,8 @@ public class ButtonHandler : MonoBehaviour
     {
         calendrier.SetActive(false);
         courir.SetActive(true);
-        StartCoroutine(TexteGrossis(courir));
-        this.gameObject.GetComponent<GameMaster>().setCardio(5);
+        //StartCoroutine(TexteGrossis(courir));
+        //this.gameObject.GetComponent<GameMaster>().setCardio(5);
 
     }
 
