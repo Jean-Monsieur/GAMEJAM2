@@ -8,7 +8,7 @@ public class TheSituation : MonoBehaviour
 
 
     [SerializeField]
-    GameObject Mike1, Mike2, Biblio, Danse, Jogging, Gym, Travailler;
+    GameObject Mike1, Mike2, Biblio, Danse, Jogging, Gym;
     [SerializeField]
     Image image;
 
@@ -32,7 +32,7 @@ public class TheSituation : MonoBehaviour
         Danse.SetActive(true);
         Jogging.SetActive(true);
         Gym.SetActive(true);
-        Travailler.SetActive(true);
+      
 
 
 

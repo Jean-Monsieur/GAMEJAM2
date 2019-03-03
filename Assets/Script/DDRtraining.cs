@@ -34,7 +34,7 @@ public class DDRtraining : MonoBehaviour
         {
             if(Arrows[i] != null)
             {
-                move[i].Set(move[i].x, (float)(move[i].y - 1.6), move[i].z);
+                move[i].Set(move[i].x, (float)(move[i].y - 1), move[i].z);
                 Arrows[i].SetPositionAndRotation(move[i], Arrows[i].rotation);
             }
         }

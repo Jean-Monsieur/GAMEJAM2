@@ -145,6 +145,7 @@ public class BenchPressed : MonoBehaviour
         if (Gamefinished == false)
         {
             LooseScreen.SetActive(true);
+            GameMaster.GetComponent<GameMaster>().setJour(1);
             Gamefinished = true;
             StartCoroutine(TimerEnd());
 

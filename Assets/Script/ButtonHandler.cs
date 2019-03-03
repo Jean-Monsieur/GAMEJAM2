@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Apart, PersistentUI, Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, travailler;
+    private GameObject Apart, PersistentUI, Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, GameMangerDanse;
 
     
 
@@ -52,8 +52,9 @@ public class ButtonHandler : MonoBehaviour
     {
         calendrier.SetActive(false);
         danse.SetActive(true);
-        StartCoroutine(TexteGrossis(danse));
-        this.gameObject.GetComponent<GameMaster>().setDance(5);
+        GameMangerDanse.SetActive(true);
+        //StartCoroutine(TexteGrossis(danse));
+        //this.gameObject.GetComponent<GameMaster>().setDance(5);
 
     }
     public void Click_Biblio()

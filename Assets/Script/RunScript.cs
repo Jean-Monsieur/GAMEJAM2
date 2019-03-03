@@ -83,6 +83,7 @@ public class RunScript : MonoBehaviour
                 shouldExecute = false;
                 animator.enabled = false;
                 rb2d.velocity = new Vector2(0f, 0f);
+                GameMaster.GetComponent<GameMaster>().setJour(1);
                 LooseScreen.SetActive(true);
                 StartCoroutine(TimerEnd());
 
