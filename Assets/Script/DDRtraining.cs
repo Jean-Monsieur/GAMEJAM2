@@ -2,45 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class DDRtraining : MonoBehaviour
 {
     //Variables
-    private Vector3 move;
-    public GameObject DDRleft;
-    double m_YAxis;
-    
-    private static double statArrowY = -135;
+    //public Text text;
+   public GameObject DDRArrow;
+    private RectTransform Arrow;
+    private RectTransform[] Arrows;
+    private Vector3[] move;
+
+    private static int ARROWMAX = 5;
+
+    [SerializeField]
+    private GameObject Parent;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Fetch the RectTransform from the GameObject
-        //DDRleft = GetComponent<RectTransform>();
+        Arrow = DDRArrow.GetComponent<RectTransform>();
+        move = new Vector3[ARROWMAX];
+        Arrows = new RectTransform[ARROWMAX];
 
-        //Initiate the x and y positions
-        //move = DDRleft.position;
-        move = DDRleft.GetComponent<RectTransform>().position;
-       // move.Set((float)-112.5, 237, 0);
-        //DDRleft.GetComponent<RectTransform>()
-            //.SetPositionAndRotation(move, DDRleft.GetComponent<RectTransform>().rotation);
+        StartCoroutine(Timer());
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_YAxis = move.y - 2.0;
-        move.Set(move.x, (float)m_YAxis, move.z);
-        DDRleft.GetComponent<RectTransform>()
-            .SetPositionAndRotation(move, DDRleft.GetComponent<RectTransform>().rotation);
-
-        if ((statArrowY + 40.0) >= m_YAxis)
-            if(m_YAxis >= (statArrowY + 40.0))
+        for(int i = 0; i < ARROWMAX; i++)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if(Arrows[i] != null)
             {
-                Debug.Log(m_YAxis);
-                this.enabled = false;
+                move[i].Set(move[i].x, (float)(move[i].y - 1.6), move[i].z);
+                Arrows[i].SetPositionAndRotation(move[i], Arrows[i].rotation);
             }
+        }
+    }
+
+    public void ajouterPoint() { }
+
+    IEnumerator Timer()
+    {
+        yield return new WaitForSeconds(Random.Range(1.0f, 5.0f));
+
+        for (int x = 0; x < ARROWMAX; x++)
+        {
+            Arrows[x] = (Instantiate(Arrow, Arrow.position, Arrow.rotation, Parent.transform));
+            move[x] = (Arrows[x].position);
+            
+            float temps = Random.Range(3.0f, 5.0f);
+            yield return new WaitForSeconds(temps);
         }
     }
 }
