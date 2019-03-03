@@ -45,6 +45,7 @@ public class RunScript : MonoBehaviour
     {
         animator.enabled = false;
         shouldExecute = true;
+        gamestarted = false;
         timer = 11;
         lastInput = "right";
         rb2d = this.GetComponent<Rigidbody2D>();
@@ -65,7 +66,7 @@ public class RunScript : MonoBehaviour
         }
 
         //icitte set ton star
-        if (timerFinished != true && gameFinished != true & gamestarted ==true)
+        if (timerFinished != true && gameFinished != true && gamestarted ==true)
         {
             movement = new Vector2(55f, 0f);
             if (lastInput == "right" && Input.GetKey("left"))

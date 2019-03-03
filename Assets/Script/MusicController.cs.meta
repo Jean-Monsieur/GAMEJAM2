@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 08dc8fa514d264049a8babd5526137b9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - menu: {fileID: 8300000, guid: efd91ade0c3787147ab23a1d9e7cc5dd, type: 3}
+  - dance: {fileID: 8300000, guid: 4c0c0fd490fddc745a2e1e004ee03b47, type: 3}
+  - club: {fileID: 8300000, guid: 60182edd99bcbf84f8e3b576448af91d, type: 3}
+  - chatter: {fileID: 8300000, guid: f571a396a81e8994d9893f564c0bd814, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

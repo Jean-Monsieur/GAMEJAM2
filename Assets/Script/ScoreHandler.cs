@@ -18,15 +18,14 @@ public class ScoreHandler : MonoBehaviour
     [SerializeField]
     private GameObject GameManager;
 
-    
+
+    [SerializeField]
+    GameObject audioSource;
 
 
-    void Awake()
+    void Start()
     {
-        textSucces.enabled = false;
-        textDefaite.enabled = false;
-        text.text = "Score: " + points.ToString() + "/10";
-        Fin = 0;
+        audioSource.GetComponent<MusicController>().PlayDance();   
     }
 
     // Update is called once per frame
@@ -34,19 +33,31 @@ public class ScoreHandler : MonoBehaviour
     {
         text.text = "Score: " + points.ToString() + "/10";
         if (Fin == 4)
-        {   if (points > 10)
+        {   if (points >= 10)
             {
                 textSucces.enabled = true;
                 GameManager.GetComponent<GameMaster>().setDance(5);
+
             }
             else
             {
+
                 textDefaite.enabled = true;
             }
-           
+
+            Fin = 0;
             StartCoroutine(TimerEnd());
 
         }
+    }
+
+    void OnEnable()
+    {
+        Fin = 0;
+        points = 0;
+        textSucces.enabled = false;
+        textDefaite.enabled = false;
+        text.text = "Score: " + points.ToString() + "/10";
     }
 
     public void ajouterPoint()
@@ -65,10 +76,8 @@ public class ScoreHandler : MonoBehaviour
 
         yield return new WaitForSeconds(3.0f);
         GameManager.GetComponent<GameMaster>().setJour(1);
-    
+        audioSource.GetComponent<MusicController>().PlayMenu();
         Menu.SetActive(true);
-        Fin = 0;
-        points = 0;
         textSucces.enabled = false;
         textDefaite.enabled = false;
         Canvas.SetActive(false);

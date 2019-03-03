@@ -10,6 +10,10 @@ public class LeftCollider : MonoBehaviour
     void start()
     {
         GameControler = GetComponent<ScoreHandler>();
+    }
+
+    void OnEnable()
+    {
         CountArrow = 0;
     }
 
@@ -21,11 +25,7 @@ public class LeftCollider : MonoBehaviour
             Destroy(collision.gameObject);
             CountArrow++;
             if (CountArrow >= 5)
-            {
-                CountArrow =0;
                 GameControler.fin();
-            }
-                
         }
     }
 
@@ -35,6 +35,7 @@ public class LeftCollider : MonoBehaviour
         CountArrow++;
         if (CountArrow >= 5)
             GameControler.fin();
+        
         Destroy(collision.gameObject, 0.3f);
     }
 }

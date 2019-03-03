@@ -10,7 +10,7 @@ public class FriendScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.GetComponent<AudioPlayer>().PlayYeah();
+        audioSource.GetComponent<MusicController>().PlayMenu();
     }
 
     // Update is called once per frame

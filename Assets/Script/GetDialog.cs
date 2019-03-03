@@ -20,7 +20,11 @@ public class GetDialog : MonoBehaviour
     [SerializeField]
     private GameObject CanvasFin;
 
-    
+    [SerializeField]
+    private GameObject audioSource;
+
+    [SerializeField]
+    private GameObject audioSource_Dialogue;
 
     private int dialogueIndex;
 
@@ -36,6 +40,23 @@ public class GetDialog : MonoBehaviour
         scenario = true;
         try
         {
+            //play sound 
+            switch (Nom)
+            {
+                case "FilleBistrot":
+                    audioSource.GetComponent<MusicController>().PlayChatter();
+                    break;
+                case "FilleDag":
+                    audioSource.GetComponent<MusicController>().PlayClub();
+                    break;
+                case "FilleIntel":
+                    audioSource.GetComponent<MusicController>().PlayClub();
+                    break;
+                case "FilleStrengh":
+                    audioSource.GetComponent<MusicController>().PlayChatter();
+                    break;
+            }
+            scenario = true;
             dialogueIndex = 0;
             //Load a text file (Assets/Resources/Text/textFile01.txt)
             var textFile = Resources.Load<TextAsset>("Dialog/" + Nom + "/" + TypeDialog);
@@ -139,12 +160,22 @@ public class GetDialog : MonoBehaviour
         {
             CanvasFin.SetActive(true);
             if (TypeDialog == "Dialog2")
+            {
                 CanvasFin.transform.GetChild(1).GetComponent<GetDialog>().TypeDialog = "Fin_Loose";
+                audioSource_Dialogue.GetComponent<AudioPlayer>().PlayMaleDefeat();
+
+            }
+                
             else
+            {
                 CanvasFin.transform.GetChild(1).GetComponent<GetDialog>().TypeDialog = "Fin_Win";
+                audioSource_Dialogue.GetComponent<AudioPlayer>().PlayMaleWin();
+            }
+               
 
+            this.transform.parent.gameObject.SetActive(false);
 
-            Debug.Log("GameFinished");
+            
         
         }
         
@@ -160,6 +191,7 @@ public class GetDialog : MonoBehaviour
                 Dialog_Text.text = txtArray[dialogueIndex];
             else
             {
+                Debug.Log("GameFinished");
                 Application.Quit();
             }
         }

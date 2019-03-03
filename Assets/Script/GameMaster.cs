@@ -35,15 +35,14 @@ public class GameMaster : MonoBehaviour
 
         jour.text = "Lundi";
         bar = this.GetComponent<CurrentBarScript>().getBarString();
-        
-       
+
+
     }
 
-    //audioSource.GetComponent<AudioPlayer>().PlayMaleDefeat();
-    //audioSource.GetComponent<AudioPlayer>().PlayMaleWin();
+    
     void Update()
     {
-       
+
         if (Jour == 5)
         {
             Calendrier.SetActive(false);
@@ -54,40 +53,67 @@ public class GameMaster : MonoBehaviour
                     if (Intel >= 5 && Cardio >= 0 && Strenght >= 15 && Dance >= 0)
                     {
                         VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
-                        //audioSource.GetComponent<AudioPlayer>().PlayFemaleWin();
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleWin();
                     }
                     else
                     {
                         VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
-               
-                        //audioSource.GetComponent<AudioPlayer>().PlayFemaleLoss();
-                        
+
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleLoss();
+
                     }
 
                     break;
                 case "DAG":
                     Dag.SetActive(true);
                     if (Intel >= 0 && Cardio >= 5 && Strenght >= 5 && Dance >= 10)
+                    {
                         Dag.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleWin();
+
+                    }
                     else
+                    {
                         Dag.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleLoss();
+                    }
+
+
+
                     break;
                 case "BARU":
                     Baru.SetActive(true);
                     if (Intel >= 15 && Cardio >= 0 && Strenght >= 0 && Dance >= 5)
+                    {
                         Baru.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleWin();
+                    }
+
                     else
+                    {
                         Baru.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleLoss();
+                    }
+
                     break;
                 case "BISS":
                     Bistro.SetActive(true);
                     if (Intel >= 5 && Cardio >= 10 && Strenght >= 5 && Dance >= 5)
+                    {
                         Bistro.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleWin();
+                    }
+
                     else
+                    {
                         Bistro.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                        audioSource.GetComponent<AudioPlayer>().PlayFemaleLoss();
+
+                    }
+
                     break;
             }
-
+            Jour = 100;
         }
     }
 
@@ -122,7 +148,7 @@ public class GameMaster : MonoBehaviour
 
     public void setJour(int _jour)
     {
-        
+
         Jour += _jour;
         jour.text = Jours[Jour];
         if (Jour == 5)

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]
-    private GameObject Apart, PersistentUI, Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, GameMangerDanse;
+    private GameObject audio, Apart, PersistentUI, Statistique, MainMenu, Gym, calendrier, courir, danse, biblio, GameMangerDanse;
 
     
 
@@ -23,6 +23,7 @@ public class ButtonHandler : MonoBehaviour
     public void Click_StartButton()
     {
         Apart.SetActive(true);
+        audio.GetComponent<AudioPlayer>().PlayYeah();
         //PersistentUI.SetActive(true);
         MainMenu.SetActive(false);
 
