@@ -38,7 +38,7 @@ public class GameMaster : MonoBehaviour
     
     void Update()
     {
-        
+       
         if (Jour == 5)
         {
             Calendrier.SetActive(false);
@@ -54,16 +54,16 @@ public class GameMaster : MonoBehaviour
                 case "DAG":
                     Dag.SetActive(true);
                     if (Intel >= 0 && Cardio >= 5 && Strenght >= 5 && Dance >= 10)
-                        Dag.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        Dag.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog1");
                     else
-                        Dag.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                        Dag.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
                 case "BARU":
                     Baru.SetActive(true);
                     if (Intel >= 15 && Cardio >= 0 && Strenght >= 0 && Dance >= 5)
-                        Baru.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                        Baru.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog1");
                     else
-                        Baru.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
+                        Baru.transform.GetChild(2).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
                 case "BISS":
                     Bistro.SetActive(true);
@@ -108,8 +108,11 @@ public class GameMaster : MonoBehaviour
 
     public void setJour(int _jour)
     {
+        
         Jour += _jour;
         jour.text = Jours[Jour];
+        if (Jour == 5)
+            Calendrier.SetActive(false);
 
     }
 }
