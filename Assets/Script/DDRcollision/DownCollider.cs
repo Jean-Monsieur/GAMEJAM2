@@ -12,6 +12,11 @@ public class DownCollider : MonoBehaviour
         GameControler = GetComponent<ScoreHandler>();
     }
 
+    void OnEnable()
+    {
+        CountArrow = 0;
+    }
+
     void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -30,6 +35,7 @@ public class DownCollider : MonoBehaviour
         CountArrow++;
         if (CountArrow >= 5)
             GameControler.fin();
+
         Destroy(collision.gameObject, 0.3f);
     }
 }

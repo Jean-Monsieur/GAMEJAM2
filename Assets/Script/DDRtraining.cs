@@ -20,6 +20,12 @@ public class DDRtraining : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Arrow = DDRArrow.GetComponent<RectTransform>();
+    }
+
+    void OnEnable()
+    {
+        Debug.Log("OnEnable");
         Arrow = DDRArrow.GetComponent<RectTransform>();
         move = new Vector3[ARROWMAX];
         Arrows = new RectTransform[ARROWMAX];
@@ -54,5 +60,7 @@ public class DDRtraining : MonoBehaviour
             float temps = Random.Range(3.0f, 5.0f);
             yield return new WaitForSeconds(temps);
         }
+
+        //this.enabled = false;
     }
 }

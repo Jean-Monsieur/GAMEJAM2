@@ -18,22 +18,9 @@ public class ScoreHandler : MonoBehaviour
     [SerializeField]
     private GameObject GameManager;
 
-    [SerializeField]
-    private GameObject Arrow1;
-    [SerializeField]
-    private GameObject Arrow2;
-    [SerializeField]
-    private GameObject Arrow3;
-    [SerializeField]
-    private GameObject Arrow4;
-
-
     void Start()
     {
-        textSucces.enabled = false;
-        textDefaite.enabled = false;
-        text.text = "Score: " + points.ToString() + "/10";
-        Fin = 0;
+        
     }
 
     // Update is called once per frame
@@ -56,6 +43,15 @@ public class ScoreHandler : MonoBehaviour
         }
     }
 
+    void OnEnable()
+    {
+        Fin = 0;
+        points = 0;
+        textSucces.enabled = false;
+        textDefaite.enabled = false;
+        text.text = "Score: " + points.ToString() + "/10";
+    }
+
     public void ajouterPoint()
     {
         points++;
@@ -74,8 +70,6 @@ public class ScoreHandler : MonoBehaviour
         GameManager.GetComponent<GameMaster>().setJour(1);
     
         Menu.SetActive(true);
-        Fin = 0;
-        points = 0;
         textSucces.enabled = false;
         textDefaite.enabled = false;
         Canvas.SetActive(false);
