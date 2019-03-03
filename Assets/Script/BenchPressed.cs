@@ -32,6 +32,9 @@ public class BenchPressed : MonoBehaviour
 	[SerializeField]
 	GameObject SpaceBarIcon;
 
+    [SerializeField]
+    private GameObject audioSource;
+
     int difficulty;
     int Strenght;
     int hit;
@@ -56,6 +59,8 @@ public class BenchPressed : MonoBehaviour
         timerFinished = false;
         start = false;
         difficulty = 75;
+
+
     }
 
     // Update is called once per frame
@@ -139,8 +144,10 @@ public class BenchPressed : MonoBehaviour
 
     IEnumerator StartGame()
     {
+        audioSource.GetComponent<AudioPlayer>().Play3();
         for (int i = 3; i> 0; i--)
         {
+            
             startTimer.text = i.ToString();
             yield return new WaitForSeconds(1.0f);
             if (i == 1)
@@ -149,8 +156,12 @@ public class BenchPressed : MonoBehaviour
                 timerFinished = true;
                 StartCoroutine(Timer());
             }
-
+            if (i == 2)
+                audioSource.GetComponent<AudioPlayer>().Play1();
+            if (i==3)
+                audioSource.GetComponent<AudioPlayer>().Play2();
         }
+        audioSource.GetComponent<AudioPlayer>().PlayGo();
         
 
 
