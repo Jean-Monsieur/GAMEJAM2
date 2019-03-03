@@ -45,7 +45,8 @@ public class ButtonHandler : MonoBehaviour
     {
         calendrier.SetActive(false);
         Gym.SetActive(true);
-        
+        Gym.transform.GetChild(0).GetComponent<BenchPressed>().Commencer();
+
     }
     public void Click_Danse()
     {
@@ -67,8 +68,7 @@ public class ButtonHandler : MonoBehaviour
     {
         calendrier.SetActive(false);
         courir.SetActive(true);
-        //StartCoroutine(TexteGrossis(courir));
-        //this.gameObject.GetComponent<GameMaster>().setCardio(5);
+        courir.transform.GetChild(3).GetComponent<RunScript>().Commencer();
 
     }
 
@@ -95,6 +95,7 @@ public class ButtonHandler : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
 
         Endroit.SetActive(false);
+        Endroit.transform.GetChild(0).GetChild(0).gameObject.transform.localScale = new Vector3(0F, 0F, 0f);
         calendrier.SetActive(true);
         this.gameObject.GetComponent<GameMaster>().setJour(1);
 
