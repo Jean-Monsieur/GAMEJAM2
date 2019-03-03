@@ -46,15 +46,31 @@ public class GameMaster : MonoBehaviour
             {
                 case "VM":
                     VM.SetActive(true);
+                    if (Intel >= 5 && Cardio >= 0 && Strenght >= 15 && Dance >= 0)
+                        VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        VM.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
                 case "DAG":
                     Dag.SetActive(true);
+                    if (Intel >= 0 && Cardio >= 5 && Strenght >= 5 && Dance >= 10)
+                        Dag.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        Dag.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
                 case "BARU":
-                    Bistro.SetActive(true);
+                    Baru.SetActive(true);
+                    if (Intel >= 15 && Cardio >= 0 && Strenght >= 0 && Dance >= 5)
+                        Baru.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        Baru.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
                 case "BISS":
                     Bistro.SetActive(true);
+                    if (Intel >= 5 && Cardio >= 10 && Strenght >= 5 && Dance >= 5)
+                        Bistro.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog1");
+                    else
+                        Bistro.transform.GetChild(1).GetComponent<GetDialog>().changeDialogue("Dialog2");
                     break;
             }
 
