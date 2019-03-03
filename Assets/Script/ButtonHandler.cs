@@ -82,7 +82,7 @@ public class ButtonHandler : MonoBehaviour
     
 
 
-    IEnumerator TexteGrossis(GameObject Endroit )
+    public IEnumerator TexteGrossis(GameObject Endroit )
     {
         Endroit.transform.GetChild(0).GetChild(0).gameObject.transform.localScale = new Vector3(0F, 01F, 0F);
         for (int i = 0; i < 45; i++)
