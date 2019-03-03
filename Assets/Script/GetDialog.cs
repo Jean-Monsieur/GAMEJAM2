@@ -20,7 +20,9 @@ public class GetDialog : MonoBehaviour
     [SerializeField]
     private GameObject CanvasFin;
 
-    
+    [SerializeField]
+    private GameObject audioSource;
+
 
     private int dialogueIndex;
 
@@ -33,6 +35,22 @@ public class GetDialog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //play sound 
+        switch (Nom)
+        {
+            case "FilleBistrot":
+                audioSource.GetComponent<MusicController>().PlayChatter();
+                break;
+            case "FilleDag":
+                audioSource.GetComponent<MusicController>().PlayClub();
+                break;
+            case "FilleIntel":
+                audioSource.GetComponent<MusicController>().PlayClub();
+                break;
+            case "FilleStrengh":
+                audioSource.GetComponent<MusicController>().PlayChatter();
+                break;
+        }
         scenario = true;
         try
         {
