@@ -714,6 +714,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 130651728}
   StartTimer: {fileID: 1563028389}
+  canvas: {fileID: 2082479060}
   GameMaster: {fileID: 1144700100}
   LooseScreen: {fileID: 543105577}
   Menu: {fileID: 605002191}
@@ -6402,6 +6403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1458704485}
   - component: {fileID: 1458704486}
+  - component: {fileID: 1458704487}
   m_Layer: 5
   m_Name: Friend
   m_TagString: Untagged
@@ -6447,6 +6449,19 @@ MonoBehaviour:
   Dialog_Text: {fileID: 385922413}
   Gamemanager: {fileID: 1144700100}
   txtArray: []
+--- !u!114 &1458704487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458704484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5eb95e8bc41044182c714e57cf8b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1479755460}
 --- !u!1 &1473440819
 GameObject:
   m_ObjectHideFlags: 0
